@@ -42,16 +42,18 @@ class Rowcontainer extends StatelessWidget {
             ),
             Positioned(
               top: -35,
-              child: GestureDetector(
-                onTap: () {
-                  num.playsound2();
-                },
-                child: Container(
-                  color: Colors.black,
-                  width: 230,
-                  height: 70,
-                ),
-              ),
+              child: num.Continue == true
+                  ? GestureDetector(
+                      onTap: () {
+                        num.playsound2();
+                      },
+                      child: Container(
+                        color: Colors.black,
+                        width: 230,
+                        height: 70,
+                      ),
+                    )
+                  : Container(),
             )
           ],
         ),
